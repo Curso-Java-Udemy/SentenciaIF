@@ -13,12 +13,13 @@ public class ProgramitaIF {
         double largo, ancho,perimetro, area, radio;  
         
         System.out.println("Seleccione una opcion: \n"
-        +"Opcion 1 - Calcular perimetro y area de un rectangulo\n"
-        +"Opcion 2 Calcular perimetro y area de un circulo\n");  
+        +"ingrese 1 o a Calcular perimetro y area de un rectangulo\n"
+        +"Ingrese 2 o b Calcular perimetro y area de un circulo\n"
+        +"Ingrese 0 o c para salir\n");  
         Scanner entrada = new Scanner(System.in);    
         opc=entrada.nextLine();
     
-        if(opc.equals("1")){
+        if(opc.equals("1") || opc.equals("a") || opc.equals("A") ){
             System.out.println("Ingrese largo: ");
             largo = entrada.nextDouble();
             entrada.nextLine();
@@ -29,7 +30,7 @@ public class ProgramitaIF {
             area = largo*ancho;
             System.out.println("El perimetro es: "+perimetro+" el area es: "+area);
             }       
-        else if(opc.equals("2")){
+        else if(opc.equals("2") || opc.equals("b") || opc.equals("B") ){
             System.out.println("Ingrese radio ");
             radio = entrada.nextDouble();
             entrada.nextLine();     
@@ -37,8 +38,12 @@ public class ProgramitaIF {
             area=radio*radio*pi;
             System.out.println("El perimetro es: "+perimetro+" el area es: "+area);
             }
+        else if ( opc.equals("0") || opc.equals("c") || opc.equals("C") ){
+            System.out.println("Chau!");
+            }
         else{
-            System.out.println("ERROR, LAS OPCIONES SON 1 Y 2");
+            System.out.print("Las opciones eran 0,1,2 o a,b,c, bye. Presione una tecla para salir");
+            entrada.nextLine();
             }
     }
 }
