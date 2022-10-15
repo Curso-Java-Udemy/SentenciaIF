@@ -10,7 +10,7 @@ public class ProgramitaIF {
         //Variales
         final double pi = 3.14;
         String opc;
-        double largo, ancho,perimetro, area, radio,perimetroc, areac;  
+        double largo, ancho,perimetro, area, radio;  
         
         System.out.println("Seleccione una opcion: \n"
         +"Opcion 1 - Calcular perimetro y area de un rectangulo\n"
@@ -33,9 +33,9 @@ public class ProgramitaIF {
             System.out.println("Ingrese radio ");
             radio = entrada.nextDouble();
             entrada.nextLine();     
-            perimetroc=radio*2*pi;
-            areac=radio*radio*pi;
-            System.out.println("El perimetro es: "+perimetroc+" el area es: "+areac);
+            perimetro=radio*2*pi;
+            area=radio*radio*pi;
+            System.out.println("El perimetro es: "+perimetro+" el area es: "+area);
             }
         else{
             System.out.println("ERROR, LAS OPCIONES SON 1 Y 2");
